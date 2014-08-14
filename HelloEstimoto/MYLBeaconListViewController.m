@@ -30,6 +30,7 @@
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"MyBeaconRegion"];
     [self.beaconManager startRangingBeaconsInRegion:self.region];
+    self.beaconManager.delegate = self;
 
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(restartRanging) forControlEvents:UIControlEventValueChanged];
@@ -43,21 +44,25 @@
     [self.beaconManager startRangingBeaconsInRegion:self.region];
 }
 
-//- (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
-//{
-//    self.beaconList = beacons;
-//    [self.beaconListTableView reloadData];
-//}
+- (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
+{
+    [self stopRangingBeacons:beacons andRefreshViewForRegion:region];
+}
 
 - (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
 {
-    [self.beaconManager stopRangingBeaconsInRegion:self.region];
-    self.beaconQuantityLabel.text = @(self.beaconList.count).description;
-    self.beaconList = beacons;
-    [self.beaconListTableView reloadData];
+    [self stopRangingBeacons:beacons andRefreshViewForRegion:region];
 }
 
+- (void)stopRangingBeacons:(NSArray *)beacons andRefreshViewForRegion:(ESTBeaconRegion *)region
+{
+    [self.refreshControl endRefreshing];
+    [self.beaconManager stopRangingBeaconsInRegion:region];
+    self.beaconList = beacons;
+    self.beaconQuantityLabel.text = self.beaconList.count ? @(self.beaconList.count).description : @"No";
+    [self.beaconListTableView reloadData];
 
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.beaconList.count;
@@ -70,7 +75,7 @@
 
     ESTBeacon *curBeacon = self.beaconList[indexPath.row];
     beaconCell.textLabel.text = curBeacon.major.description;
-    beaconCell.detailTextLabel.text = curBeacon.macAddress;
+    beaconCell.detailTextLabel.text = curBeacon.minor.description;
 
     return beaconCell;
 }
