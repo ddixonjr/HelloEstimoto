@@ -14,13 +14,14 @@
 		95AD1B68199C402A001F4202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1B67199C402A001F4202 /* main.m */; };
 		95AD1B6C199C402A001F4202 /* MYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1B6B199C402A001F4202 /* MYLAppDelegate.m */; };
 		95AD1B6F199C402A001F4202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AD1B6D199C402A001F4202 /* Main.storyboard */; };
-		95AD1B72199C402A001F4202 /* MYLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1B71199C402A001F4202 /* MYLViewController.m */; };
+		95AD1B72199C402A001F4202 /* MYLBeaconListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1B71199C402A001F4202 /* MYLBeaconListViewController.m */; };
 		95AD1B74199C402A001F4202 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AD1B73199C402A001F4202 /* Images.xcassets */; };
 		95AD1B7B199C402A001F4202 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD1B7A199C402A001F4202 /* XCTest.framework */; };
 		95AD1B7C199C402A001F4202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD1B5B199C402A001F4202 /* Foundation.framework */; };
 		95AD1B7D199C402A001F4202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD1B5F199C402A001F4202 /* UIKit.framework */; };
 		95AD1B85199C402A001F4202 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95AD1B83199C402A001F4202 /* InfoPlist.strings */; };
 		95AD1B87199C402A001F4202 /* HelloEstimotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1B86199C402A001F4202 /* HelloEstimotoTests.m */; };
+		95AD1B91199C4151001F4202 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD1B90199C4151001F4202 /* libEstimoteSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,22 @@
 		95AD1B6A199C402A001F4202 /* MYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLAppDelegate.h; sourceTree = "<group>"; };
 		95AD1B6B199C402A001F4202 /* MYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLAppDelegate.m; sourceTree = "<group>"; };
 		95AD1B6E199C402A001F4202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		95AD1B70199C402A001F4202 /* MYLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLViewController.h; sourceTree = "<group>"; };
-		95AD1B71199C402A001F4202 /* MYLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLViewController.m; sourceTree = "<group>"; };
+		95AD1B70199C402A001F4202 /* MYLBeaconListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLBeaconListViewController.h; sourceTree = "<group>"; };
+		95AD1B71199C402A001F4202 /* MYLBeaconListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLBeaconListViewController.m; sourceTree = "<group>"; };
 		95AD1B73199C402A001F4202 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		95AD1B79199C402A001F4202 /* HelloEstimotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloEstimotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AD1B7A199C402A001F4202 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		95AD1B82199C402A001F4202 /* HelloEstimotoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloEstimotoTests-Info.plist"; sourceTree = "<group>"; };
 		95AD1B84199C402A001F4202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95AD1B86199C402A001F4202 /* HelloEstimotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloEstimotoTests.m; sourceTree = "<group>"; };
+		95AD1B90199C4151001F4202 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../EstimoteProjects/Examples/EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
+		95AD1B92199C42B8001F4202 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeacon.h; path = ../ESTBeacon.h; sourceTree = "<group>"; };
+		95AD1B93199C42B8001F4202 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconDefinitions.h; path = ../ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		95AD1B94199C42B8001F4202 /* ESTBeaconFirmwareInfoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconFirmwareInfoVO.h; path = ../ESTBeaconFirmwareInfoVO.h; sourceTree = "<group>"; };
+		95AD1B95199C42B8001F4202 /* ESTBeaconFirmwareVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconFirmwareVO.h; path = ../ESTBeaconFirmwareVO.h; sourceTree = "<group>"; };
+		95AD1B96199C42B8001F4202 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconManager.h; path = ../ESTBeaconManager.h; sourceTree = "<group>"; };
+		95AD1B97199C42B8001F4202 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconRegion.h; path = ../ESTBeaconRegion.h; sourceTree = "<group>"; };
+		95AD1B98199C42B8001F4202 /* ESTBeaconVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconVO.h; path = ../ESTBeaconVO.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95AD1B91199C4151001F4202 /* libEstimoteSDK.a in Frameworks */,
 				95AD1B5E199C402A001F4202 /* CoreGraphics.framework in Frameworks */,
 				95AD1B60199C402A001F4202 /* UIKit.framework in Frameworks */,
 				95AD1B5C199C402A001F4202 /* Foundation.framework in Frameworks */,
@@ -101,6 +111,7 @@
 		95AD1B5A199C402A001F4202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95AD1B90199C4151001F4202 /* libEstimoteSDK.a */,
 				95AD1B5B199C402A001F4202 /* Foundation.framework */,
 				95AD1B5D199C402A001F4202 /* CoreGraphics.framework */,
 				95AD1B5F199C402A001F4202 /* UIKit.framework */,
@@ -115,8 +126,8 @@
 				95AD1B6A199C402A001F4202 /* MYLAppDelegate.h */,
 				95AD1B6B199C402A001F4202 /* MYLAppDelegate.m */,
 				95AD1B6D199C402A001F4202 /* Main.storyboard */,
-				95AD1B70199C402A001F4202 /* MYLViewController.h */,
-				95AD1B71199C402A001F4202 /* MYLViewController.m */,
+				95AD1B70199C402A001F4202 /* MYLBeaconListViewController.h */,
+				95AD1B71199C402A001F4202 /* MYLBeaconListViewController.m */,
 				95AD1B73199C402A001F4202 /* Images.xcassets */,
 				95AD1B62199C402A001F4202 /* Supporting Files */,
 			);
@@ -126,6 +137,13 @@
 		95AD1B62199C402A001F4202 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				95AD1B92199C42B8001F4202 /* ESTBeacon.h */,
+				95AD1B93199C42B8001F4202 /* ESTBeaconDefinitions.h */,
+				95AD1B94199C42B8001F4202 /* ESTBeaconFirmwareInfoVO.h */,
+				95AD1B95199C42B8001F4202 /* ESTBeaconFirmwareVO.h */,
+				95AD1B96199C42B8001F4202 /* ESTBeaconManager.h */,
+				95AD1B97199C42B8001F4202 /* ESTBeaconRegion.h */,
+				95AD1B98199C42B8001F4202 /* ESTBeaconVO.h */,
 				95AD1B63199C402A001F4202 /* HelloEstimoto-Info.plist */,
 				95AD1B64199C402A001F4202 /* InfoPlist.strings */,
 				95AD1B67199C402A001F4202 /* main.m */,
@@ -251,7 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95AD1B68199C402A001F4202 /* main.m in Sources */,
-				95AD1B72199C402A001F4202 /* MYLViewController.m in Sources */,
+				95AD1B72199C402A001F4202 /* MYLBeaconListViewController.m in Sources */,
 				95AD1B6C199C402A001F4202 /* MYLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +398,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloEstimoto/HelloEstimoto-Prefix.pch";
 				INFOPLIST_FILE = "HelloEstimoto/HelloEstimoto-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Dennis/DevRamp/appivot/learn/EstimoteProjects/Examples/EstimoteSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +415,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloEstimoto/HelloEstimoto-Prefix.pch";
 				INFOPLIST_FILE = "HelloEstimoto/HelloEstimoto-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Dennis/DevRamp/appivot/learn/EstimoteProjects/Examples/EstimoteSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

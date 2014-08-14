@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MYLViewController : UIViewController
+@interface MYLBeaconListViewController : UIViewController
 
 @end
