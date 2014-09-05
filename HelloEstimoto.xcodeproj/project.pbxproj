@@ -24,6 +24,7 @@
 		95AD1B91199C4151001F4202 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD1B90199C4151001F4202 /* libEstimoteSDK.a */; };
 		95AD1B9A199C59B9001F4202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD1B99199C59B9001F4202 /* CoreLocation.framework */; };
 		95AD1B9C199C5A2A001F4202 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD1B9B199C5A2A001F4202 /* SystemConfiguration.framework */; };
+		95AE22D319B900920049AB88 /* MYLRangingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AE22D219B900920049AB88 /* MYLRangingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		95AD1B98199C42B8001F4202 /* ESTBeaconVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconVO.h; path = ../ESTBeaconVO.h; sourceTree = "<group>"; };
 		95AD1B99199C59B9001F4202 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		95AD1B9B199C5A2A001F4202 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		95AE22D119B900920049AB88 /* MYLRangingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLRangingViewController.h; sourceTree = "<group>"; };
+		95AE22D219B900920049AB88 /* MYLRangingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLRangingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				95AD1B71199C402A001F4202 /* MYLBeaconListViewController.m */,
 				95AD1B73199C402A001F4202 /* Images.xcassets */,
 				95AD1B62199C402A001F4202 /* Supporting Files */,
+				95AE22D119B900920049AB88 /* MYLRangingViewController.h */,
+				95AE22D219B900920049AB88 /* MYLRangingViewController.m */,
 			);
 			path = HelloEstimoto;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95AE22D319B900920049AB88 /* MYLRangingViewController.m in Sources */,
 				95AD1B68199C402A001F4202 /* main.m in Sources */,
 				95AD1B72199C402A001F4202 /* MYLBeaconListViewController.m in Sources */,
 				95AD1B6C199C402A001F4202 /* MYLAppDelegate.m in Sources */,
@@ -491,6 +497,7 @@
 				95AD1B8C199C402A001F4202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95AD1B8D199C402A001F4202 /* Build configuration list for PBXNativeTarget "HelloEstimotoTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +506,7 @@
 				95AD1B8F199C402A001F4202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

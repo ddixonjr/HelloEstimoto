@@ -29,8 +29,8 @@
 
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"MyBeaconRegion"];
-    [self.beaconManager startRangingBeaconsInRegion:self.region];
     self.beaconManager.delegate = self;
+    [self.beaconManager startRangingBeaconsInRegion:self.region];
 
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(restartRanging) forControlEvents:UIControlEventValueChanged];

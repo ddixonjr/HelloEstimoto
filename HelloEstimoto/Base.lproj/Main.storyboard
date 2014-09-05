@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="46" y="37"/>
         </scene>
-        <!--View Controller - Ranger-->
+        <!--Ranging View Controller - Ranger-->
         <scene sceneID="OeE-F0-5fn">
             <objects>
-                <viewController id="idh-8k-dVj" sceneMemberID="viewController">
+                <viewController id="idh-8k-dVj" customClass="MYLRangingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DT1-g8-q1a"/>
                         <viewControllerLayoutGuide type="bottom" id="JYM-h7-ril"/>
@@ -154,6 +154,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ranger" id="rhW-wb-Q39"/>
+                    <connections>
+                        <outlet property="closeRangeLabel" destination="2d2-UU-kV0" id="iH5-c4-qFk"/>
+                        <outlet property="longRangeLabel" destination="ILM-Ix-Tgb" id="K9W-Nw-ZUK"/>
+                        <outlet property="mediumRangeLabel" destination="XMN-vP-vwA" id="PrB-ey-3y2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QqU-Gv-atx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
