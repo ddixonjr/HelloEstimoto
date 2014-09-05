@@ -75,7 +75,7 @@
 
     ESTBeacon *curBeacon = self.beaconList[indexPath.row];
     beaconCell.textLabel.text = curBeacon.major.description;
-    beaconCell.detailTextLabel.text = curBeacon.minor.description;
+    beaconCell.detailTextLabel.text = [curBeacon.distance description];
 
     return beaconCell;
 }
